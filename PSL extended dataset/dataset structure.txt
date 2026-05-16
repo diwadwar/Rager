@@ -1,0 +1,73 @@
+Gestures:
+1 - why?
+2 - goodbye
+3 - thank you
+4 - good morning
+5 - I don't understand
+6 - please
+7 - greetings
+8 - no
+9 - yes
+___________________________________________________
+Text data (directories 1-6):
+
+Directory structure:
+<subject_number>/<gesture_number>/<repetition>
+
+Each file *.dat corresponds to separate video frame.
+Each row corresponds to a different body landmark.
+Columns:
+1: x coordinate, 2: y coordinate, 3: z coodrinate, 4: landmark detection confidence [0-1]
+___________________________________________________
+Python, numpy (PSL_extended.npz):
+
+import numpy as np
+
+dataset = np.load('PSL.npz', allow_pickle=True)
+data = dataset['data'] 
+labels = dataset['labels']
+
+data # array of subjects
+data[0] # array of gesture repetitions from first subject
+data[0][0] # 2D array MxN, where M is the number of features (fixed) and N is the number of frames (variable)
+		   # Features are arranged as follows: [x1, y1, z1, x2, y2, z2, ..., xM, yM, zM], where x, y, z are body landmark coordinates
+data[1][2][3,4] # subject 1, gesture repetition 2, feature 3, frame 4 (float)
+labels[0] # class number (str) '1', '2' etc.
+__________________________________________________
+Landmarks:
+[In text files all landmarks are present.]
+[In Python file only the landmarks 12-25 (torso and arms) are present.] 
+
+1 - nose
+2 - left eye (inner)
+3 - left eye
+4 - left eye (outer)
+5 - right eye (inner)
+6 - right eye
+7 - right eye (outer)
+8 - left ear
+9 - right ear
+10 - mouth (left)
+11 - mouth (right)
+12 - left shoulder
+13 - right shoulder
+14 - left elbow
+15 - right elbow
+16 - left wrist
+17 - right wrist
+18 - left pinky
+19 - right pinky
+20 - left index
+21 - right index
+22 - left thumb
+23 - right thumb
+24 - left hip
+25 - right hip
+26 - left knee
+27 - right knee
+28 - left ankle
+29 - right ankle
+30 - left heel
+31 - right heel
+32 - left foot index
+33 - right foot index
