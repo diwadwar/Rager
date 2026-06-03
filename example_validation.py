@@ -9,7 +9,7 @@ import time
 def validate(dataset='PSL extended dataset\\PSL_extended.npz',alignLengthMethod='padding',time_measure=False,
                    repetitions=30,verbose=True,n_kernels=None,max_dilations=None):
     # --- reading data ---
-    dataset = np.load(,allow_pickle=True)
+    dataset = np.load(dataset,allow_pickle=True)
 
     data = dataset['data']
     labels = dataset['labels']
