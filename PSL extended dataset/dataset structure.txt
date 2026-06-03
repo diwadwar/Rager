@@ -19,7 +19,7 @@ Each row corresponds to a different body landmark.
 Columns:
 1: x coordinate, 2: y coordinate, 3: z coodrinate, 4: landmark detection confidence [0-1]
 ___________________________________________________
-Python, numpy (PSL_extended.npz):
+Python script for loading and processing the dataset:
 
 import numpy as np
 
