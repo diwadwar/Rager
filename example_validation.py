@@ -6,7 +6,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import accuracy_score, balanced_accuracy_score, f1_score
 import time
 
-def rocketValidate(dataset='PSL extended dataset\\PSL_extended.npz',alignLengthMethod='padding',time_measure=False,
+def validate(dataset='PSL extended dataset\\PSL_extended.npz',alignLengthMethod='padding',time_measure=False,
                    repetitions=30,verbose=True,n_kernels=None,max_dilations=None):
     # --- reading data ---
     dataset = np.load(,allow_pickle=True)
