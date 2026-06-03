@@ -23,7 +23,7 @@ Python script for loading and processing the dataset:
 
 import numpy as np
 
-dataset = np.load('PSL.npz', allow_pickle=True)
+dataset = np.load('PSL_extended.npz', allow_pickle=True)
 data = dataset['data'] 
 labels = dataset['labels']
 
