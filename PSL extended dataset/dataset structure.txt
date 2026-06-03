@@ -27,8 +27,8 @@ dataset = np.load('PSL.npz', allow_pickle=True)
 data = dataset['data'] 
 labels = dataset['labels']
 
-data # array of subjects
-data[0] # array of gesture repetitions from first subject
+data # array of subsets/subjects
+data[0] # array of gesture repetitions from the first subset/subject
 data[0][0] # 2D array MxN, where M is the number of features (fixed) and N is the number of frames (variable)
 		   # Features are arranged as follows: [x1, y1, z1, x2, y2, z2, ..., xM, yM, zM], where x, y, z are body landmark coordinates
 data[1][2][3,4] # subject 1, gesture repetition 2, feature 3, frame 4 (float)
