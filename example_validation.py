@@ -155,7 +155,7 @@ def validate(dataset='PSL extended dataset\\PSL_extended.npz',alignLengthMethod=
                 balanced_accuracies.mean(),f1_scores.mean())
 
 # run validation
-accuracies, meanAccuracies, meanBalAccuracies, meanF1Score = rocketValidate()
+accuracies, meanAccuracies, meanBalAccuracies, meanF1Score = validate()
 
 
 
